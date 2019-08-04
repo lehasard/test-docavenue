@@ -1,0 +1,66 @@
+@import 'reset';
+
+
+/* =VARIABLES */
+$color1: #12424d;
+$color2: #44a7b7;
+$background: #e1e7ec;
+
+
+/* =GENERAL */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: $background;
+}
+
+main{
+  display: flex;
+  padding: 10px;
+  > div { flex: 1; }
+  > div + div { margin-left: 10px; }
+}
+
+.block{
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.125);
+  padding: 15px;
+  & + & { margin-top: 10px; }
+}
+
+
+
+/* =NAV */
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  background: $color1;
+  color: #fff;
+  h1 img{
+    display: block;
+    height: 30px;
+    width: auto;
+  }
+}
+
+
+/* =INFOS */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

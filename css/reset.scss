@@ -1,0 +1,54 @@
+
+/* =RESET */
+
+html {
+  font-size: calc(1em * .625);
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.4em;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: auto;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+input,
+button,
+textarea {
+  outline: none;
+  background: transparent;
+}
+
+textarea {
+  resize: none;
+}
+
+a {
+  color: inherit;
+}
