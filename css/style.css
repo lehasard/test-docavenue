@@ -170,6 +170,9 @@ nav h1 img {
   border: 1px solid #cecece;
 }
 
+.payment {
+  width: 100%;
+}
 .payment th {
   text-align: left;
 }
