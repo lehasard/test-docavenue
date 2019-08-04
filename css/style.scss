@@ -2,15 +2,19 @@
 
 
 /* =VARIABLES */
+$fa-font-path:        "../webfonts";
+
 $color1: #12424d;
 $color2: #44a7b7;
 $background: #e1e7ec;
+$font-color: #5f6b7a;
 
 
 /* =GENERAL */
 body {
   font-family: 'Roboto', sans-serif;
   background-color: $background;
+  color: $font-color;
 }
 
 main{
@@ -25,6 +29,20 @@ main{
   box-shadow: 0 1px 3px rgba(0,0,0,.125);
   padding: 15px;
   & + & { margin-top: 10px; }
+  &__header {
+    border-bottom: 1px solid #cecece;
+    margin: -15px -15px 0;
+    padding: 7px 15px;
+    font-size: 20px;
+    i { margin-right: 5px; }
+    &--blue {
+      background: $color2;
+      color: #fff;
+    }
+  }
+  &__content {
+    margin-top: 15px;
+  }
 }
 
 
@@ -46,15 +64,59 @@ nav{
   }
 }
 
+/* INFOS */
+.infos-header {
+  display: flex;
+  align-items: center;
+  &__img {
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid #cecece;
+  }
+}
 
-/* =INFOS */
+.payment{
+  th {
+    text-align: left;
+  }
+}
 
+.map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% + 30px);
+  height: 100px;
+  margin: 15px 0 -15px -15px ;
+  background: #efefef;
+}
 
-
-
-
-
-
+.phone {
+  display: flex;
+  justify-content: center;
+  &__switch { display: none; }
+  &__content {
+    padding: 5px 30px;
+    border: 1px solid transparent;
+    &:before { content: "Voir le numéro de téléphone"; }
+    span {
+      display: none;
+      color: #000;
+    }
+    &:hover {
+      border: 1px solid #cecece;
+    }
+  }
+  &__switch:checked ~ &__content {
+    border: 1px solid #cecece;
+    &:before { content: ""; }
+    span { display: inline; }
+  }
+}
 
 
 

@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Fiche du praticien : Dr Didier Cado</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="css/fontawesome/all.css"  rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
     <script type="application/javascript" src="js/scripts.js"></script>
 </head>
 
@@ -17,11 +18,15 @@
             <img src="img/logo.png" />
         </h1>
         <div class="menu-patient">
-            <i class="menu-patient__icon"></i>
+            <i class="menu-patient__icon far fa-user"></i>
             <ul class="menu-patient__list">
                 <li>
-                    <!-- icon patient -->
+                    <i class="far fa-user"></i>
                     Connexion Patient
+                </li>
+                <li>
+                    <i class="fas fa-stethoscope"></i>
+                    Vous êtes praticien ?
                 </li>
             </ul>
         </div>
@@ -34,7 +39,7 @@
         <div class="infos">
             <!-- HEADER -->
             <div class="block infos-header">
-                <div class="infos-header__img"></div>
+                <div class="infos-header__img" style="background-image:url('img/thumb_user.png');"></div>
                 <div class="infos-header__title">
                     <h2>Dr Didier Cado</h2>
                     <span>Médecin Généraliste</span>
@@ -44,11 +49,11 @@
             <!-- PAYMENTS -->
             <div class="block">
                 <div class="block__header">
-                    <!-- icon euro -->
+                    <i class="fas fa-euro-sign"></i>
                     <span>Paiements et remboursements</span>
                 </div>
                 <div class="block__content">
-                    <table>
+                    <table class="payment">
                         <tr>
                             <th>Consultation</th>
                             <th>Moyens de paiement</th>
@@ -66,16 +71,18 @@
             <!-- LOCATION -->
             <div class="block">
                 <div class="block__header">
-                    <!-- icon location -->
-                    <span>Vous rendez chez ce praticien</span>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Vous rendre chez ce praticien</span>
                 </div>
                 <div class="block__content">
                     <strong>Adresse</strong>
-                    Cabinet des Docteurs Cado & Del Buono
-                    3 avenue Georges Clémenceau
-                    78500 Sartrouville
-                    <div class="block__map">
-                        <!-- Insert Google Maps content here -->
+                    <div>
+                        Cabinet des Docteurs Cado & Del Buono<br />
+                        3 avenue Georges Clémenceau<br />
+                        78500 Sartrouville
+                    </div>
+                    <div class="map">
+                        Insert Google Maps content here
                     </div>
                 </div>
             </div>
@@ -83,13 +90,14 @@
             <!-- PHONE -->
             <div class="block">
                 <div class="block__header">
-                    <!-- icon phone -->
+                    <i class="fas fa-phone"></i>
                     <span>Téléphone</span>
                 </div>
-                <div class="block__content">
-                    <div class="phone">
-                        Tel. : 01 39 14 16 42
-                    </div>
+                <div class="block__content phone">
+                    <input type="radio" class="phone__switch" id="phone-switch" />
+                    <label class="phone__content" for="phone-switch">
+                        <span>Tel. : 01 39 14 16 42</span>
+                    </label>
                 </div>
             </div>
 
@@ -99,7 +107,7 @@
         <div class="appointment">
 
             <!-- APPOINTMENT DETAILS (default: hidden) -->
-            <div class="block">
+            <div class="block" style="display:none;">
                 <div class="block__content">
                     <div class="highlight">
                         Votre rendez-vous avec Dr Didier CADO - lun. 05 août à 08:30
@@ -145,14 +153,14 @@
             <!-- APPOINTMENTS LIST (if no availability)-->
             <div class="block">
                 <div class="block__header block__header--blue">
-                    <!-- icon calendar -->
+                    <i class="far fa-calendar-plus"></i>
                     <span>Prendre rendez-vous</span>
                 </div>
                 <div class="block__content">
                     <ul class="appointment-list">
-                        <li>lun. 29 juillet</li>
-                        <li>mar. 30 juillet</li>
-                        <li>mer. 31 juillet</li>
+                        <li>lun. 29 juil.</li>
+                        <li>mar. 30 juil.</li>
+                        <li>mer. 31 juil.</li>
                         <li>jeu. 1 août</li>
                         <li>ven. 2 août</li>
                         <li>sam. 3 août</li>
@@ -169,14 +177,14 @@
             <!-- APPOINTMENTS LIST (if availability)-->
             <div class="block">
                 <div class="block__header block__header--blue">
-                    <!-- icon calendar -->
+                    <i class="far fa-calendar-plus"></i>
                     <span>Prendre rendez-vous</span>
                 </div>
                 <div class="block__content agenda">
                     <ul class="agenda__header">
-                        <li>lun. 29 juillet</li>
-                        <li>mar. 30 juillet</li>
-                        <li>mer. 31 juillet</li>
+                        <li>lun. 29 juil.</li>
+                        <li>mar. 30 juil.</li>
+                        <li>mer. 31 juil.</li>
                         <li>jeu. 1 août</li>
                         <li>ven. 2 août</li>
                         <li>sam. 3 août</li>
