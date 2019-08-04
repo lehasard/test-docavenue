@@ -17,9 +17,12 @@
         <h1>
             <img src="img/logo.png" />
         </h1>
-        <div class="menu-patient">
-            <i class="menu-patient__icon far fa-user"></i>
-            <ul class="menu-patient__list">
+        <div class="menu">
+            <input type="checkbox" class="menu__switch" id="menu-switch" />
+            <label for="menu-switch">
+                <i class="menu__icon far fa-user"></i>
+            </label>
+            <ul class="menu__list">
                 <li>
                     <i class="far fa-user"></i>
                     Connexion Patient
@@ -157,16 +160,20 @@
                     <span>Prendre rendez-vous</span>
                 </div>
                 <div class="block__content">
-                    <ul class="appointment-list">
-                        <li>lun. 29 juil.</li>
-                        <li>mar. 30 juil.</li>
-                        <li>mer. 31 juil.</li>
-                        <li>jeu. 1 août</li>
-                        <li>ven. 2 août</li>
-                        <li>sam. 3 août</li>
-                        <li>dim. 4 août</li>
-                    </ul>
-                    <div class="no-appointment">
+                    <div class="agenda__header">
+                        <i class="fas fa-chevron-left"></i>
+                        <ul>
+                            <li>lun. 29 juil.</li>
+                            <li>mar. 30 juil.</li>
+                            <li>mer. 31 juil.</li>
+                            <li>jeu. 1 août</li>
+                            <li>ven. 2 août</li>
+                            <li>sam. 3 août</li>
+                            <li>dim. 4 août</li>
+                        </ul>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="agenda__content no-appointment">
                         Aucune disponibilité cette semaine.
                         <span>Prochain rendez-vous le <a href="#">lun. 05 août à 08:15</a></span>
                     </div>
@@ -181,15 +188,19 @@
                     <span>Prendre rendez-vous</span>
                 </div>
                 <div class="block__content agenda">
-                    <ul class="agenda__header">
-                        <li>lun. 29 juil.</li>
-                        <li>mar. 30 juil.</li>
-                        <li>mer. 31 juil.</li>
-                        <li>jeu. 1 août</li>
-                        <li>ven. 2 août</li>
-                        <li>sam. 3 août</li>
-                        <li>dim. 4 août</li>
-                    </ul>
+                    <div class="agenda__header">
+                        <i class="fas fa-chevron-left"></i>
+                        <ul>
+                            <li>lun. 29 juil.</li>
+                            <li>mar. 30 juil.</li>
+                            <li>mer. 31 juil.</li>
+                            <li>jeu. 1 août</li>
+                            <li>ven. 2 août</li>
+                            <li>sam. 3 août</li>
+                            <li>dim. 4 août</li>
+                        </ul>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
                     <div class="agenda__content">
                         <ul class="agenda__hours">
                             <li>08:15</li>
