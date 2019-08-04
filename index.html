@@ -10,7 +10,215 @@
 </head>
 
 <body>
+    <!-- NAVIGATION -->
+    <nav>
+        <h1>
+            <img src="img/logo.png" />
+        </h1>
+        <div class="menu-patient">
+            <i class="menu-patient__icon"></i>
+            <ul class="menu-patient__list">
+                <li>
+                    <!-- icon patient -->
+                    Connexion Patient
+                </li>
+            </ul>
+        </div>
+    </nav>
 
+    <!-- MAIN CONTENT-->
+    <main>
+
+        <!-- INFO COLUMN -->
+        <div class="infos">
+            <!-- HEADER -->
+            <div class="infos-header">
+                <div class="infos-header__img"></div>
+                <div class="infos-header__title">
+                    <h2>Dr Didier Cado</h2>
+                    <span>Médecin Généraliste</span>
+                </div>
+            </div>
+
+            <!-- PAYMENTS -->
+            <div class="block">
+                <div class="block__header">
+                    <!-- icon euro -->
+                    <span>Paiements et remboursements</span>
+                </div>
+                <div class="block__content">
+                    <table>
+                        <tr>
+                            <th>Consultation</th>
+                            <th>Moyens de paiement</th>
+                            <th>Carte Vitale</th>
+                        </tr>
+                        <tr>
+                            <td>25€ (Secteur 1)</td>
+                            <td>Chèque, espèces</td>
+                            <td>Oui</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- LOCATION -->
+            <div class="block">
+                <div class="block__header">
+                    <!-- icon location -->
+                    <span>Vous rendez chez ce praticien</span>
+                </div>
+                <div class="block__content">
+                    <strong>Adresse</strong>
+                    Cabinet des Docteurs Cado & Del Buono
+                    3 avenue Georges Clémenceau
+                    78500 Sartrouville
+                    <div class="block__map">
+                        <!-- Insert Google Maps content here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHONE -->
+            <div class="block">
+                <div class="block__header">
+                    <!-- icon phone -->
+                    <span>Téléphone</span>
+                </div>
+                <div class="block__content">
+                    <div class="phone">
+                        Tel. : 01 39 14 16 42
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- APPOINTMENT COLUMN -->
+        <div class="appointment">
+
+            <!-- APPOINTMENT DETAILS (default: hidden) -->
+            <div class="block">
+                <div class="block__content">
+                    <div class="highlight">
+                        Votre rendez-vous avec Dr Didier CADO - lun. 05 août à 08:30
+                    </div>
+                    <form>
+                        <label class="g-mandatory" for="appointment-firstname">Prénom</label>
+                        <input id="appointment-firstname" />
+
+                        <label class="g-mandatory" for="appointment-lastname">Nom</label>
+                        <input id="appointment-lastname" />
+
+                        <label class="g-mandatory" for="appointment-email">Email</label>
+                        <input id="appointment-firstname" />
+
+                        <label class="g-mandatory" for="appointment-phone">Téléphone</label>
+                        <input id="appointment-phone" />
+
+                        <label class="g-mandatory" for="appointment-birthdate">Date de naissance</label>
+                        <input id="appointment-birthdate" />
+
+                        <label class="g-mandatory">Sexe</label>
+                        <input type="radio" name="gender" value="female" id="gender_female">
+                        <label for="app-gender_female">Femme</label>
+                        <input type="radio" name="gender" value="female" id="gender_male">
+                        <label for="app-gender_male">Homme</label>
+                        <input type="radio" name="gender" value="female" id="gender_other">
+                        <label for="app-gender_other">Autre</label>
+
+                        <label class="g-mandatory" for="appointment-password">Mot de passe</label>
+                        <input id="appointment-password" placeholder="8 caractères minimum" />
+
+                        <label class="g-mandatory" for="appointment-password-confirm">Confirmation du mot de passe</label>
+                        <input id="appointment-password-confirm" />
+
+                        <input type="checkbox" name="cgu" value="ok" id="cgu">
+                        <label for="cgu">J'accepte les <a href="#">Conditions Générales d'utilisarion</a> du site</label>
+
+                        <button type="submit">S'inscrire</button>
+                    </form>
+                    <div class=""
+                </div>
+            </div>
+
+            <!-- APPOINTMENTS LIST (if no availability)-->
+            <div class="block">
+                <div class="block__header block__header--blue">
+                    <!-- icon calendar -->
+                    <span>Prendre rendez-vous</span>
+                </div>
+                <div class="block__content">
+                    <ul class="appointment-list">
+                        <li>lun. 29 juillet</li>
+                        <li>mar. 30 juillet</li>
+                        <li>mer. 31 juillet</li>
+                        <li>jeu. 1 août</li>
+                        <li>ven. 2 août</li>
+                        <li>sam. 3 août</li>
+                        <li>dim. 4 août</li>
+                    </ul>
+                    <div class="no-appointment">
+                        Aucune disponibilité cette semaine.
+                        <span>Prochain rendez-vous le <a href="#">lun. 05 août à 08:15</a></span>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- APPOINTMENTS LIST (if availability)-->
+            <div class="block">
+                <div class="block__header block__header--blue">
+                    <!-- icon calendar -->
+                    <span>Prendre rendez-vous</span>
+                </div>
+                <div class="block__content agenda">
+                    <ul class="agenda__header">
+                        <li>lun. 29 juillet</li>
+                        <li>mar. 30 juillet</li>
+                        <li>mer. 31 juillet</li>
+                        <li>jeu. 1 août</li>
+                        <li>ven. 2 août</li>
+                        <li>sam. 3 août</li>
+                        <li>dim. 4 août</li>
+                    </ul>
+                    <div class="agenda__content">
+                        <ul class="agenda__hours">
+                            <li>08:15</li>
+                            <li>08:30</li>
+                            <li>08:45</li>
+                            <li>09:00</li>
+                            <li>09:15</li>
+                            <li>09:30</li>
+                            <li>09:45</li>
+                            <li>10:00</li>
+                        </ul>
+                        <ul class="agenda__hours">
+                            <li>08:15</li>
+                            <li>08:30</li>
+                            <li>08:45</li>
+                            <li>09:00</li>
+                            <li>09:15</li>
+                            <li>09:30</li>
+                            <li>09:45</li>
+                            <li>10:00</li>
+                        </ul>
+                        <ul class="agenda__hours"></ul>
+                        <ul class="agenda__hours"></ul>
+                        <ul class="agenda__hours"></ul>
+                        <ul class="agenda__hours"></ul>
+                        <ul class="agenda__hours"></ul>
+                    </div>
+
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
 </body>
 
 </html>
