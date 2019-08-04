@@ -60,6 +60,10 @@ body {
   color: #5f6b7a;
 }
 
+a {
+  color: #44a7b7;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -111,6 +115,7 @@ nav {
   padding: 10px;
   background: #12424d;
   color: #fff;
+  z-index: 10;
 }
 nav h1 img {
   display: block;
@@ -118,7 +123,7 @@ nav h1 img {
   width: auto;
 }
 
-.menu i {
+.menu__icon {
   background: #86bfcc;
   padding: 10px;
   border-radius: 50%;
@@ -133,9 +138,15 @@ nav h1 img {
   right: 5px;
   background-color: #86bfcc;
   color: #12424d;
+  z-index: 10;
 }
 .menu__list li {
-  padding: 10px;
+  padding: 20px;
+  cursor: pointer;
+}
+.menu__list li:hover {
+  color: #fff;
+  background-color: #44a7b7;
 }
 .menu__list li + li {
   border-top: 1px solid rgba(18, 66, 77, 0.25);
@@ -208,7 +219,7 @@ nav h1 img {
 .agenda__header {
   position: relative;
   border-bottom: 1px solid #cecece;
-  margin: -15px -15px 15px;
+  margin: -15px -15px 0;
   padding: 0 15px;
 }
 .agenda__header ul {
@@ -235,4 +246,34 @@ nav h1 img {
 }
 .agenda__header .fa-chevron-right {
   right: 5px;
+}
+.agenda__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -15px -15px;
+  padding: 14px 15px 0;
+  min-height: 100px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+.agenda__content ul {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.agenda__content li {
+  padding: 7px 0;
+  text-align: center;
+  cursor: pointer;
+}
+.agenda__content li:hover {
+  color: #fff;
+  background: #44a7b7;
+}
+.agenda .no-appointment {
+  margin-top: -14px;
+  padding: 7px 12px;
+  text-align: center;
+  border: 1px solid #cecece;
 }

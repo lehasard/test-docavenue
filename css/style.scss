@@ -18,6 +18,10 @@ body {
   color: $font-color;
 }
 
+a {
+  color: $color2;
+}
+
 main{
   display: flex;
   flex-direction: column;
@@ -64,6 +68,7 @@ nav{
   padding: 10px;
   background: $color1;
   color: #fff;
+  z-index: 10;
   h1 img{
     display: block;
     height: 30px;
@@ -72,7 +77,7 @@ nav{
 }
 
 .menu {
-  i {
+  &__icon {
     background: $color3;
     padding: 10px;
     border-radius: 50%;
@@ -87,7 +92,15 @@ nav{
     right: 5px;
     background-color: $color3;
     color: $color1;
-    li { padding: 10px; }
+    z-index: 10;
+    li {
+      padding: 20px;
+      cursor: pointer;
+      &:hover {
+        color: #fff;
+        background-color: $color2;
+      }
+    }
     li + li {
       border-top: 1px solid rgba(18,66,77,.25);
     }
@@ -156,7 +169,7 @@ nav{
   &__header {
     position: relative;
     border-bottom: 1px solid #cecece;
-    margin: -15px -15px 15px;
+    margin: -15px -15px 0;
     padding: 0 15px;
     ul {
       display: flex;
@@ -177,6 +190,36 @@ nav{
     }
     .fa-chevron-left { left: 5px; }
     .fa-chevron-right { right: 5px; }
+  }
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 -15px -15px;
+    padding: 14px 15px 0;
+    min-height: 100px;
+    max-height: 250px;
+    overflow-y: auto;
+    ul {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    li {
+      padding: 7px 0;
+      text-align: center;
+      cursor: pointer;
+      &:hover {
+        color: #fff;
+        background: $color2;
+      }
+    }
+  }
+  .no-appointment {
+    margin-top: -14px;
+    padding: 7px 12px;
+    text-align: center;
+    border: 1px solid #cecece;
   }
 }
 
